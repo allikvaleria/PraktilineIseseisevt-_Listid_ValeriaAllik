@@ -142,3 +142,68 @@ for i in range(len(nimekirja)):
     if nimekirja[i]==maksimum:
         nimekirja[i]=kasutud_numbrid
 print("Esialgne nimekiri:"+str(nimekirja))
+
+
+##6.1
+#from random import *
+#from string import *
+#num=input("Vvidite chislo cherez probel :").split()
+#num=list(map(int, num))
+#if not num:
+#    print("Oshibka : spisol chisel pust.")
+#else: 
+#    max_num=max(num)
+#num[num.index(max_num)]=max_num/len(num)
+#print("Spisok posle zameni :",num)
+
+
+##6.2
+#from random import *
+#from string import *
+#lst=[]
+#v = int(input("Kui palju numbreid te nimekirjas soovite?"))
+#for i in range(v):
+#    v = int(input("Arv: "))
+#    lst.append(v)
+#suur = 0
+#for el in lst:
+#    if el > suur:
+#        suur = el
+#lst[lst.index(suur)] = suur / ( len(lst) + 1)
+#print(f"suur {suur}, indeks on {lst.index(suur) + 1}\n{lst}")
+
+
+#9
+nimi = input("Mis sinu nimi on?")
+if nimi.isalpha(): #Метод isalpha() возвращает True в том случае, если все символы в строке являются буквами
+    print("Tere, " + nimi.capitalize() + "!") #.capitalize() #nimi->Nimi
+    nimi_1= len(nimi)
+    vokaalid= 0 #vokaalid = "aeiouöäõü"
+    konsonandid = 0 #konsonandid = "bcdfghjklmnpqrstvwxyz"
+    for täht in nimi:
+        if täht.lower() in 'abcdfghjklmnpqrstvwxyz':
+            vokaalid+= 1
+        else:
+            konsonandid+= 1
+    print("Tähtede arv nimes:",nimi_1)
+    print("Täishäälikute arv:",vokaalid)
+    print("Konsonanttähtede arv:",konsonandid)
+    unikaalne_täht= sorted(set(nimi.lower())) #сортирует элементы данного списка в определенном порядке возрастания или убывания.
+    print("Nimetähed tähestikulises järjekorras:", ", ".join(unikaalne_täht))
+else:
+    print("Nimi peab sisaldama ainult tähti!")
+
+
+#12
+from random import *
+N=int(input("Sisesta num suurus :"))
+arv=random.randint(1, 100) 
+for i in range(N):
+    print("Lähtenimekiri:",arv)
+min_arv = min(arv)
+max_arv = max(arv)
+min_index = arv.index(min_arv)
+max_index = arv.index(max_arv)
+arv[min_index] = 0
+arv[max_index] = 100
+print("Loetelu pärast minimaalse ja maksimaalse elemendi asendamist:",arv)
