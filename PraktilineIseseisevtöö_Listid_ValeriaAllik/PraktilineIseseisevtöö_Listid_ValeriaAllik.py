@@ -35,23 +35,20 @@
 #    nimed.append(nimi)
 
 #2.1
-nimed=[]
-for i in range(5):
-    nimi=input("Sisesta nimi : ").capitalize() #nimi--->Nimi
-    nimed.append(nimi)
+#nimed=[]
+#
+#print("Loetelu oli : ",nimed) #1 var
+#nimed.sort() #сортировка
+#print("Loetelu sorteeritud : ",nimed) #2 var
+#for n in range(len(nimed)):
+#    print(n+1,".",nimed[n],sep="")
+#print("Vimasena oli lisatud: ",nimi)
 
-print("Loetelu oli : ",nimed) #1 var
-nimed.sort() #сортировка
-print("Loetelu sorteeritud : ",nimed) #2 var
-for n in range(len(nimed)):
-    print(n+1,".",nimed[n],sep="")
-print("Vimasena oli lisatud: ",nimi)
-
-uued_nimed=[]
-for nimi in nimed:
-    if nimi not in uued_nimed: #1 var
-        uued_nimed.append(nimi)
-print(uued_nimed)
+#uued_nimed=[]
+#for nimi in nimed:
+#    if nimi not in uued_nimed: #1 var
+#       uued_nimed.append(nimi)
+#print(uued_nimed)
 
 #uued_nimed=list(set(nimed)) #2 var
 
@@ -112,18 +109,18 @@ print(uued_nimed)
 from random import *
 from string import *
 #5 Vahetus
-rida=[]
-N=randint(2,15)
-for i in range(N):
-    rida.append(choice(ascii_uppercase))
-print(rida)
-kogus=int(input("Mitu elemendi vahetame oma vahel "))
-if len(rida)//2>=kogus:
-    for i in range(kogus):
-        a=rida[i]
-        rida[i]=rida[len(rida)-i-1]
-        rida[len(rida)-1-i]=a
-print (rida)
+#rida=[]
+#N=randint(2,15)
+#for i in range(N):
+#    rida.append(choice(ascii_uppercase))
+#print(rida)
+#kogus=int(input("Mitu elemendi vahetame oma vahel "))
+#if len(rida)//2>=kogus:
+#    for i in range(kogus):
+#        a=rida[i]
+#        rida[i]=rida[len(rida)-i-1]
+#        rida[len(rida)-1-i]=a
+#print (rida)
 
 
 #6 Бесполезные числа
