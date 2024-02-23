@@ -124,21 +124,21 @@ from string import *
 
 
 #6 Бесполезные числа
-from random import *
-N=int(input("Sisesta num :"))
-nimekirja=[]
-for i in range(N):
-    arv=randint(10,100)
-    nimekirja.append(arv)
-maksimum=nimekirja[0]
-for arv in nimekirja:
-    if arv>maksimum:
-        maksimum=arv
-        kasutud_numbrid=maksimum/len(nimekirja)
-for i in range(len(nimekirja)):
-    if nimekirja[i]==maksimum:
-        nimekirja[i]=kasutud_numbrid
-print("Esialgne nimekiri:"+str(nimekirja))
+#from random import *
+#N=int(input("Sisesta num :"))
+#nimekirja=[]
+#for i in range(N):
+#    arv=randint(10,100)
+#    nimekirja.append(arv)
+#maksimum=nimekirja[0]
+#for arv in nimekirja:
+#    if arv>maksimum:
+#        maksimum=arv
+#        kasutud_numbrid=maksimum/len(nimekirja)
+#for i in range(len(nimekirja)):
+#    if nimekirja[i]==maksimum:
+#        nimekirja[i]=kasutud_numbrid
+#print("Esialgne nimekiri:"+str(nimekirja))
 
 
 ##6.1
@@ -212,4 +212,32 @@ for i in vastused:
     vastus=choice(vastused) 
     print(vastus)
 
+#11
+tähestik=["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+järeljada=-1
+for i in tähestik:
+    järeljada+=1
+    tähestik[järeljada]=i*(järeljada+1)
+    print(tähestik)
 
+
+#15
+arv=[1,2,3,4]
+eesti=["üks","kaks","kolm","neli"]
+english=["one","two","three","four"]
+itaalia=["uno","due","tre","quattro"]
+try:
+    itaalia_index=itaalia.index("tre")
+    print("element 'tre' itaalia sõnajadas on positsioonil ",itaalia_index)
+except ValueError:
+    print("element 'tre' Itaalia sõnajärje ei leitud")
+arv.append(5) 
+arv.append(6) 
+eesti.append("viis") 
+eesti.append("kuus")
+english.append("five")
+english.append("six")
+itaalia.append("cinque")
+itaalia.append("sei")
+for i in range(len(arv)): 
+    print(arv[i],eesti[i],english[i],itaalia[i]) 
