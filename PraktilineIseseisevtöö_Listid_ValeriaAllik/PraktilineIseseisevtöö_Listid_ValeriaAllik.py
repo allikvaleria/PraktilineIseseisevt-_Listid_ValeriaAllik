@@ -193,17 +193,15 @@ else:
 
 #12
 from random import *
-N=int(input("Sisesta num suurus :"))
-arv=random.randint(1, 100) 
-for i in range(N):
-    print("Lähtenimekiri:",arv)
-min_arv = min(arv)
-max_arv = max(arv)
-min_index = arv.index(min_arv)
-max_index = arv.index(max_arv)
-arv[min_index] = 0
-arv[max_index] = 100
-print("Loetelu pärast minimaalse ja maksimaalse elemendi asendamist:",arv)
+random_arv=[]
+for i in range(10):
+    arv=randint(1, 100) 
+    random_arv.append(arv)
+min_arv =random_arv.index(min(random_arv))
+max_arv = random_arv.index(max(random_arv))
+random_arv[min_arv] = 0
+random_arv[max_arv] = 100
+print("Loetelu pärast minimaalse ja maksimaalse elemendi asendamist:",random_arv) 
 
 
 #16
