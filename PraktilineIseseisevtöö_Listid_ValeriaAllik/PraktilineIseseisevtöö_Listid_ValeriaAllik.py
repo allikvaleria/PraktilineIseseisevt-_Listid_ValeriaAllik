@@ -204,3 +204,14 @@ max_index = arv.index(max_arv)
 arv[min_index] = 0
 arv[max_index] = 100
 print("Loetelu pärast minimaalse ja maksimaalse elemendi asendamist:",arv)
+
+
+#16
+from random import choice
+vastused=["Jah, kindlasti!","Jah!","Võib olla!","Ei!"]
+for i in vastused:
+    küsimus=input("Esitage küsimus, millele saab vastata: Jah või Ei")
+    vastus=choice(vastused) 
+    print(vastus)
+
+
